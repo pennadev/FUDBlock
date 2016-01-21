@@ -1,0 +1,62 @@
+blockSites = [
+    "*://expunere.com/*",
+    "*://ortodoxie.md/*",
+    "*://cocoon.ro/*",
+    "*://efemeride.ro/*",
+    "*://lovendal.ro/*",
+    "*://expunere.com/*",
+    "*://stiripesurse.ro/*",
+    "*://onlinereport.ro/*",
+    "*://comisarul.ro/*",
+    "*://blastingnews.com/*",
+    "*://nationalisti.ro/*",
+    "*://napocanews.ro/*",
+    "*://infoalert.ro/*",
+    "*://cyd.ro/*",
+    "*://dcnews.ro/*",
+    "*://activenews.ro/*",
+    "*://nuv.ro/*",
+    "*://inliniedreapta.net/*",
+    "*://bn24.ro/*",
+    "*://stiri-extreme/*ro;",
+    "*://exclusiv24.net/*",
+    "*://stirinefiltrate.ro/*",
+    "*://gandeste.org/*",
+    "*://fluierul.ro/*",
+    "*://ortodox.md/*",
+    "*://doxologia.ro/*",
+    "*://lupuldacicblogg.wordpress.com/*",
+    "*://incorect.org/*",
+    "*://reporteronline.net/*",
+    "*://teinformam.ro/*",
+    "*://criterii.ro/*",
+    "*://eufrosin.wordpress.com/*",
+    "*://recentnews.ro/*",
+    "*://soim.ro/*",
+    "*://dailynewsro.com/*",
+    "*://obiectiv.info/*",
+    "*://dzr.org.ro/*",
+    "*://stirinefiltrate.ro/*",
+    "*://yno.ro/*",
+    "*://ziaristionline.ro/*",
+    "*://lovendal.ro/*",
+    "*://searchnewsglobal.wordpress.com/*",
+    "*://social-media-romania.eu/*",
+    "*://nasul.ro/*",
+    "*://nationalisti.ro/*",
+    "*://aflasitu.ro/*",
+    "*://cunoastelumea.ro/*",
+    "*://descrieri.ro/*",
+    "*://nedreptate.net/*",
+    "*://vremuritulburi.com/*"
+];
+
+chrome.webRequest.onBeforeRequest.addListener(
+    function () {
+        return {cancel: true};
+    },
+    {
+        urls: blockSites
+    },
+    ["blocking"]
+);
